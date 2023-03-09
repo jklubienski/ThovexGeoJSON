@@ -10,6 +10,8 @@ import Alamofire
 
 class AppModel: NSObject {
     
+    /// Sends a GET request to the landstack service to retrieve GeoJSON data
+    /// - Parameter completionHandler: Used to return the data only when the query is complete
     func getGeoJSON(completionHandler: @escaping (Data) -> Void) {
         
         let requestURL = "https://landstack-public-dev2.s3-eu-west-2.amazonaws.com/temp/testAppData.json"
